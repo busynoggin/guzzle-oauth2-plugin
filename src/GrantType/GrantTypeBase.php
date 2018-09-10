@@ -58,7 +58,7 @@ abstract class GrantTypeBase implements GrantTypeInterface
     protected function getDefaults()
     {
         return [
-            'scope' => '',
+            //'scope' => '',
             self::CONFIG_TOKEN_URL => '/oauth2/token',
             self::CONFIG_AUTH_LOCATION => 'headers',
         ];
