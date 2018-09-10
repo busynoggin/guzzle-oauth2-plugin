@@ -127,7 +127,8 @@ abstract class GrantTypeBase implements GrantTypeInterface
             unset($body[self::CONFIG_CLIENT_ID], $body[self::CONFIG_CLIENT_SECRET]);
         }
 
-        $requestOptions[RequestOptions::FORM_PARAMS] = $body;
+        //$requestOptions[RequestOptions::FORM_PARAMS] = $body;
+        $requestOptions[RequestOptions::JSON] = $body;
 
         if ($additionalOptions = $this->getAdditionalOptions()) {
             $requestOptions = array_merge_recursive($requestOptions, $additionalOptions);
